@@ -1,0 +1,80 @@
+.input__container {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.input__container input {
+    height: 25px;
+    border-radius: 2px;
+    border: transparent;
+}
+
+.input__container input:first-child {
+    width: 250px;
+}
+
+.input__container input:nth-child(2) {
+    width: 350px;
+}
+
+.input__container input[type=checkbox] {
+    position: relative;
+    width: 18px;
+    top: -4px;
+}
+
+.input__container label {
+    order: 2;
+    color: #fff;
+}
+.input__container input:focus {
+    background-color: rgb(251, 251, 194);
+}
+
+.input__container button {
+    position: relative;
+    left: 150px;
+    color: #fff;
+    background-color: var(--color-black);
+    border-radius: 2px;
+    border: transparent;
+    padding: .3rem 3rem;
+    order: 2;
+}
+
+.invalid{
+    background-color: var(--color-post-important);
+    transition: .2s;
+}
+
+.input__warning {
+    position: absolute;
+    top: 100px;
+    left: 500px;
+    font-weight: bolder;
+    color: var(--color-post-important);
+} 
+
+/* ------------- MEDIA QUERIES (SMALL DEVICES) ------------- */
+
+@media screen and (max-width: 600px) {
+
+    .input__container {
+        margin: 0;
+        gap: 5px;
+    }
+
+    .input__container button {
+        left: 20px;
+    }
+
+    .input__warning {
+        position: relative;
+        top: 0;
+        left: 0;
+    } 
+    
+
+}
