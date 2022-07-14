@@ -49,12 +49,15 @@ function AddTask() {
   
   useEffect(() => {
     const prevPost = JSON.parse(localStorage.getItem("posts"));
-    if (prevPost.length === 0) {
-      return;
-    }else {
-      setPosts(prevPost);
-      setId(prevPost[0].id + 1)
+    if (prevPost) {
+      if (prevPost.length === 0) {
+        return;
+      }else {
+        setPosts(prevPost);
+        setId(prevPost[0].id + 1)
+      }
     }
+
   }, []);
 
   useEffect(() => {
